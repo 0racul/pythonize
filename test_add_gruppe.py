@@ -10,12 +10,12 @@ def is_alert_present(wd):
     except:
         return False
 
-class 1_try(unittest.TestCase):
+class test_add_gruppe(unittest.TestCase):
     def setUp(self):
-        self.wd = WebDriver()
+        self.wd = WebDriver(capabilities={"marionette": False})
         self.wd.implicitly_wait(60)
     
-    def test_1_try(self):
+    def test_test_add_gruppe(self):
         success = True
         wd = self.wd
         wd.get("http://localhost/addressbook/")
