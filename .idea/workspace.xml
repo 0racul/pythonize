@@ -14,8 +14,8 @@
       <file leaf-file-name="test_add_gruppe.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test_add_gruppe.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="14" column="63" lean-forward="false" selection-start-line="14" selection-start-column="63" selection-end-line="14" selection-end-column="63" />
+            <state relative-caret-position="289">
+              <caret line="32" column="32" lean-forward="true" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
               <folding>
                 <element signature="e#24#82#0" expanded="true" />
               </folding>
@@ -23,7 +23,24 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="group.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/group.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="28" lean-forward="false" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -32,13 +49,14 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/1_try.py" />
+        <option value="$PROJECT_DIR$/group.py" />
         <option value="$PROJECT_DIR$/test_add_gruppe.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="260" />
-    <option name="y" value="20" />
+    <option name="x" value="-288" />
+    <option name="y" value="-15" />
     <option name="width" value="1400" />
     <option name="height" value="1000" />
   </component>
@@ -126,6 +144,12 @@
     <history-entry file="py_test_in_test_add_gruppe_py - 2017.10.14 at 16h 31m 50s.xml">
       <configuration name="py.test in test_add_gruppe.py" configurationId="tests" />
     </history-entry>
+    <history-entry file="py_test_in_test_add_gruppe_py - 2017.10.15 at 18h 26m 24s.xml">
+      <configuration name="py.test in test_add_gruppe.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_in_test_add_gruppe_py - 2017.10.15 at 18h 27m 05s.xml">
+      <configuration name="py.test in test_add_gruppe.py" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -166,10 +190,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/group.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="28" lean-forward="false" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test_add_gruppe.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="14" column="63" lean-forward="false" selection-start-line="14" selection-start-column="63" selection-end-line="14" selection-end-column="63" />
+        <state relative-caret-position="289">
+          <caret line="32" column="32" lean-forward="true" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
           <folding>
             <element signature="e#24#82#0" expanded="true" />
           </folding>
