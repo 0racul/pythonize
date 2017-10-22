@@ -11,23 +11,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="test_add_gruppe.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="test_add_gruppe.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test_add_gruppe.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="69" column="0" lean-forward="true" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+            <state relative-caret-position="289">
+              <caret line="17" column="29" lean-forward="false" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
               <folding>
-                <element signature="e#24#82#0" expanded="true" />
+                <element signature="e#24#47#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="add_contact.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="application.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="58" lean-forward="true" selection-start-line="18" selection-start-column="58" selection-end-line="18" selection-end-column="58" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="add_contact.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/add_contact.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="176">
-              <caret line="22" column="71" lean-forward="true" selection-start-line="22" selection-start-column="71" selection-end-line="22" selection-end-column="71" />
+              <caret line="16" column="31" lean-forward="true" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
               <folding>
                 <element signature="e#24#82#0" expanded="true" />
                 <element signature="e#2123#3279#0" expanded="false" />
@@ -45,8 +55,8 @@
       <file leaf-file-name="group.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/group.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="24" lean-forward="true" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+            <state relative-caret-position="85">
+              <caret line="5" column="10" lean-forward="false" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -69,8 +79,10 @@
       <list>
         <option value="$PROJECT_DIR$/1_try.py" />
         <option value="$PROJECT_DIR$/group.py" />
-        <option value="$PROJECT_DIR$/test_add_gruppe.py" />
         <option value="$PROJECT_DIR$/add_contact.py" />
+        <option value="$PROJECT_DIR$/aplication.py" />
+        <option value="$PROJECT_DIR$/application.py" />
+        <option value="$PROJECT_DIR$/test_add_gruppe.py" />
       </list>
     </option>
   </component>
@@ -125,7 +137,37 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.py.test in add_contact.py">
+  <component name="RunManager" selected="Python tests.py.test in test_add_gruppe.py">
+    <configuration name="py.test for test_add_gruppe.test_add_gruppe" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="pythonize" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_add_gruppe.test_add_gruppe&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+    </configuration>
+    <configuration name="py.test for test_add_gruppe.test_add_gruppe.test_add_empty_gruppe" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="pythonize" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_add_gruppe.test_add_gruppe.test_add_empty_gruppe&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+    </configuration>
     <configuration name="py.test in add_contact.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -156,14 +198,18 @@
       <option name="_new_target" value="&quot;$PROJECT_DIR$/test_add_gruppe.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
-    <list size="2">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Python tests.py.test in test_add_gruppe.py" />
       <item index="1" class="java.lang.String" itemvalue="Python tests.py.test in add_contact.py" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.py.test for test_add_gruppe.test_add_gruppe" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.py.test for test_add_gruppe.test_add_gruppe.test_add_empty_gruppe" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.py.test in add_contact.py" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.py.test in test_add_gruppe.py" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Python tests.py.test in test_add_gruppe.py" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.py.test for test_add_gruppe.test_add_gruppe" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.py.test for test_add_gruppe.test_add_gruppe.test_add_empty_gruppe" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.py.test in add_contact.py" />
       </list>
     </recent_temporary>
   </component>
@@ -181,31 +227,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="py_test_in_add_contact_py - 2017.10.15 at 18h 42m 51s.xml">
-      <configuration name="py.test in add_contact.py" configurationId="tests" />
+    <history-entry file="py_test_for_test_add_gruppe_test_add_gruppe - 2017.10.22 at 12h 59m 01s.xml">
+      <configuration name="py.test for test_add_gruppe.test_add_gruppe" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_add_contact_py - 2017.10.15 at 18h 43m 25s.xml">
-      <configuration name="py.test in add_contact.py" configurationId="tests" />
+    <history-entry file="py_test_for_test_add_gruppe_test_add_gruppe - 2017.10.22 at 12h 59m 34s.xml">
+      <configuration name="py.test for test_add_gruppe.test_add_gruppe" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_add_contact_py - 2017.10.15 at 18h 44m 06s.xml">
-      <configuration name="py.test in add_contact.py" configurationId="tests" />
+    <history-entry file="py_test_for_test_add_gruppe_test_add_gruppe - 2017.10.22 at 13h 11m 36s.xml">
+      <configuration name="py.test for test_add_gruppe.test_add_gruppe" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_add_contact_py - 2017.10.15 at 18h 45m 30s.xml">
-      <configuration name="py.test in add_contact.py" configurationId="tests" />
+    <history-entry file="py_test_for_test_add_gruppe_test_add_gruppe_test_add_empty_gruppe - 2017.10.22 at 12h 41m 47s.xml">
+      <configuration name="py.test for test_add_gruppe.test_add_gruppe.test_add_empty_gruppe" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_add_contact_py - 2017.10.15 at 18h 51m 12s.xml">
-      <configuration name="py.test in add_contact.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="py_test_in_add_contact_py - 2017.10.15 at 19h 17m 54s.xml">
-      <configuration name="py.test in add_contact.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="py_test_in_test_add_gruppe_py - 2017.10.14 at 16h 31m 50s.xml">
+    <history-entry file="py_test_in_test_add_gruppe_py - 2017.10.22 at 12h 32m 28s.xml">
       <configuration name="py.test in test_add_gruppe.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_test_add_gruppe_py - 2017.10.15 at 18h 26m 24s.xml">
+    <history-entry file="py_test_in_test_add_gruppe_py - 2017.10.22 at 12h 43m 38s.xml">
       <configuration name="py.test in test_add_gruppe.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_test_add_gruppe_py - 2017.10.15 at 18h 27m 05s.xml">
+    <history-entry file="py_test_in_test_add_gruppe_py - 2017.10.22 at 12h 54m 21s.xml">
+      <configuration name="py.test in test_add_gruppe.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_in_test_add_gruppe_py - 2017.10.22 at 13h 00m 15s.xml">
+      <configuration name="py.test in test_add_gruppe.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_in_test_add_gruppe_py - 2017.10.22 at 13h 10m 59s.xml">
+      <configuration name="py.test in test_add_gruppe.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_in_test_add_gruppe_py - 2017.10.22 at 13h 12m 05s.xml">
       <configuration name="py.test in test_add_gruppe.py" configurationId="tests" />
     </history-entry>
   </component>
@@ -251,28 +300,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_add_gruppe.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="69" column="0" lean-forward="true" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
-          <folding>
-            <element signature="e#24#82#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/group.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="24" lean-forward="true" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/add_contact.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
-          <caret line="22" column="71" lean-forward="true" selection-start-line="22" selection-start-column="71" selection-end-line="22" selection-end-column="71" />
+          <caret line="16" column="31" lean-forward="true" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
           <folding>
             <element signature="e#24#82#0" expanded="true" />
             <element signature="e#2123#3279#0" expanded="false" />
@@ -282,6 +313,48 @@
             <element signature="e#4842#5317#0" expanded="false" />
             <element signature="e#5403#6081#0" expanded="false" />
             <element signature="e#6136#6516#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aplication.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1139">
+          <caret line="67" column="22" lean-forward="true" selection-start-line="67" selection-start-column="22" selection-end-line="67" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Anaconda3/Lib/unittest/case.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="442" column="8" lean-forward="false" selection-start-line="442" selection-start-column="8" selection-end-line="442" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="58" lean-forward="true" selection-start-line="18" selection-start-column="58" selection-end-line="18" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/group.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="10" lean-forward="false" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_add_gruppe.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="29" lean-forward="false" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
+          <folding>
+            <element signature="e#24#47#0" expanded="true" />
           </folding>
         </state>
       </provider>
