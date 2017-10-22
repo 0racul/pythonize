@@ -14,15 +14,15 @@ def app(request):
 
 def test_add_gruppe(app):
     app.session.login("admin", "secret")
-    app.open_group_page()
-    app.group_creation_init()
-    app.fill_group_fields(Group("y", "bh", "bh"))
+    app.group.open()
+    app.group.creation_init()
+    app.group.fill_fields(Group("y", "bh", "bh"))
     app.session.logout()
 
 def test_add_empty_gruppe(app):
     app.session.login("admin", "secret")
-    app.open_group_page()
-    app.group_creation_init()
-    app.fill_group_fields(Group("", "", ""))
+    app.group.open()
+    app.group.creation_init()
+    app.group.fill_fields(Group("", "", ""))
     app.session.logout()
 
