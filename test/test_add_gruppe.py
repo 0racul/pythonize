@@ -12,17 +12,17 @@ def app(request):
     return fixture
 
 
-def add_gruppe(app):
-    app.login("admin", "secret")
+def test_add_gruppe(app):
+    app.session.login("admin", "secret")
     app.open_group_page()
     app.group_creation_init()
     app.fill_group_fields(Group("y", "bh", "bh"))
-    app.logout()
+    app.session.logout()
 
-def add_empty_gruppe(app):
-    app.login("admin", "secret")
+def test_add_empty_gruppe(app):
+    app.session.login("admin", "secret")
     app.open_group_page()
     app.group_creation_init()
     app.fill_group_fields(Group("", "", ""))
-    app.logout()
+    app.session.logout()
 

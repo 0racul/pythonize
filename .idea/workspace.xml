@@ -14,8 +14,8 @@
       <file leaf-file-name="test_add_gruppe.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/test_add_gruppe.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="25" lean-forward="true" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
+            <state relative-caret-position="289">
+              <caret line="17" column="29" lean-forward="true" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
               <folding>
                 <element signature="e#24#37#0" expanded="true" />
               </folding>
@@ -23,12 +23,24 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="session.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fixture/session.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" column="40" lean-forward="false" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="application.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fixture/application.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="58" lean-forward="true" selection-start-line="18" selection-start-column="58" selection-end-line="18" selection-end-column="58" />
-              <folding />
+            <state relative-caret-position="153">
+              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#58#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -83,6 +95,9 @@
         <option value="$PROJECT_DIR$/aplication.py" />
         <option value="$PROJECT_DIR$/application.py" />
         <option value="$PROJECT_DIR$/test_add_gruppe.py" />
+        <option value="$PROJECT_DIR$/fixture/session.py" />
+        <option value="$PROJECT_DIR$/test/test_add_gruppe.py" />
+        <option value="$PROJECT_DIR$/fixture/application.py" />
       </list>
     </option>
   </component>
@@ -220,18 +235,37 @@
       <option name="_new_target" value="&quot;$PROJECT_DIR$/test/test_add_gruppe.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
-    <list size="4">
+    <configuration name="test_add_gruppe" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="pythonize" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/test_add_gruppe.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python tests.py.test in test_add_gruppe.py" />
       <item index="1" class="java.lang.String" itemvalue="Python tests.py.test in add_contact.py" />
       <item index="2" class="java.lang.String" itemvalue="Python tests.py.test for test_add_gruppe.py" />
       <item index="3" class="java.lang.String" itemvalue="Python tests.py.test for test_add_gruppe.py" />
+      <item index="4" class="java.lang.String" itemvalue="Python.test_add_gruppe" />
     </list>
     <recent_temporary>
-      <list size="4">
+      <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python tests.py.test in test_add_gruppe.py" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.py.test for test_add_gruppe.py" />
+        <item index="1" class="java.lang.String" itemvalue="Python.test_add_gruppe" />
         <item index="2" class="java.lang.String" itemvalue="Python tests.py.test for test_add_gruppe.py" />
-        <item index="3" class="java.lang.String" itemvalue="Python tests.py.test in add_contact.py" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.py.test for test_add_gruppe.py" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.py.test in add_contact.py" />
       </list>
     </recent_temporary>
   </component>
@@ -261,9 +295,6 @@
     <history-entry file="py_test_for_test_add_gruppe_test_add_gruppe_test_add_empty_gruppe - 2017.10.22 at 12h 41m 47s.xml">
       <configuration name="py.test for test_add_gruppe.test_add_gruppe.test_add_empty_gruppe" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_test_add_gruppe_py - 2017.10.22 at 12h 32m 28s.xml">
-      <configuration name="py.test in test_add_gruppe.py" configurationId="tests" />
-    </history-entry>
     <history-entry file="py_test_in_test_add_gruppe_py - 2017.10.22 at 12h 43m 38s.xml">
       <configuration name="py.test in test_add_gruppe.py" configurationId="tests" />
     </history-entry>
@@ -277,6 +308,9 @@
       <configuration name="py.test in test_add_gruppe.py" configurationId="tests" />
     </history-entry>
     <history-entry file="py_test_in_test_add_gruppe_py - 2017.10.22 at 13h 12m 05s.xml">
+      <configuration name="py.test in test_add_gruppe.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_in_test_add_gruppe_py - 2017.10.22 at 15h 52m 05s.xml">
       <configuration name="py.test in test_add_gruppe.py" configurationId="tests" />
     </history-entry>
   </component>
@@ -363,18 +397,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/fixture/session.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="40" lean-forward="false" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/fixture/application.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="58" lean-forward="true" selection-start-line="18" selection-start-column="58" selection-end-line="18" selection-end-column="58" />
-          <folding />
+        <state relative-caret-position="153">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#58#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/test_add_gruppe.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="25" lean-forward="true" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
+        <state relative-caret-position="289">
+          <caret line="17" column="29" lean-forward="true" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
           <folding>
             <element signature="e#24#37#0" expanded="true" />
           </folding>
