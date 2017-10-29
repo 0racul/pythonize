@@ -30,6 +30,17 @@ class GroupHelper:
         self.submit()
         self.return_to()
 
+
+    def delete_first_group(self):
+        wd = self.app.wd
+        self.open()
+        #select 1st group
+        wd.find_element_by_name("selected[]").click()
+        #submit del
+        wd.find_element_by_name("delete").click()
+        self.return_to()
+
+
     def creation_init(self):
         # init group creation
         wd = self.app.wd
