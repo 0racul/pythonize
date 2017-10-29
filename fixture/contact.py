@@ -7,12 +7,13 @@ class ContactHelper:
 
     def contact_creation(self, contact):
         wd = self.app.wd
+        self.new_contact_init()
         self.fill_contact_fields(contact)
+        self.select_group()
         self.submit()
 
     def fill_contact_fields(self, contact):
         wd = self.app.wd
-        self.new_contact_init()
         self.input_firstname(contact.firstname)
         self.input_middlename(contact.middlename)
         self.input_lastname(contact.lastname)
@@ -63,7 +64,6 @@ class ContactHelper:
         self.input_anniversary_day()
         self.input_anniversary_month()
         self.input_anniversary_year("3010")
-        self.select_group()
 
     def select_group(self):
         wd = self.app.wd
@@ -195,3 +195,18 @@ class ContactHelper:
     def new_contact_init(self):
         wd = self.app.wd
         wd.find_element_by_link_text("add new").click()
+
+    def delete_first_contact(self):
+        wd = self.app.wd
+        wd.find_element_by_name("selected[]").click()
+        wd.find_element_by_xpath("//div[@id='content']/form[2]/div[2]/input").click()
+        wd.switch_to_alert().accept()
+
+    def init_edit_first_contact(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//table[@id='maintable']/tbody/tr[3]/td[8]/a/img").click()
+
+    def submit_updating(self):
+        wd = self.app.wd
+        wd.find_element_by_name("update").click()
+

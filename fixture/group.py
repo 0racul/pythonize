@@ -27,8 +27,7 @@ class GroupHelper:
         wd.find_element_by_name("group_footer").click()
         wd.find_element_by_name("group_footer").clear()
         wd.find_element_by_name("group_footer").send_keys(group.footer)
-        self.submit()
-        self.return_to()
+
 
 
     def delete_first_group(self):
@@ -39,6 +38,15 @@ class GroupHelper:
         #submit del
         wd.find_element_by_name("delete").click()
         self.return_to()
+
+    def modify_first_group(self, group):
+        wd = self.app.wd
+        self.open()
+        wd.find_element_by_name("selected[]").click()
+        wd.find_element_by_name("edit").click()
+        self.fill_fields(group)
+        wd.find_element_by_name("update").click()
+
 
 
     def creation_init(self):
