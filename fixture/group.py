@@ -1,4 +1,4 @@
-
+from model.group import Group
 
 class GroupHelper:
     def __init__(self, app):
@@ -61,3 +61,16 @@ class GroupHelper:
         # open group page
         wd = self.app.wd
         wd.find_element_by_link_text("groups").click()
+
+    def create_group(self, group):
+        wd = self.app.wd
+        self.open()
+        self.creation_init()
+        self.fill_fields(group)
+        self.submit()
+        self.return_to()
+
+    def count(self):
+        wd = self.app.wd
+        self.open()
+        return len(wd.find_elements_by_name("selected[]"))
