@@ -108,7 +108,7 @@ class ContactHelper:
 
     def init_edit_first_contact(self):
         wd = self.app.wd
-        wd.find_element_by_xpath("//table[@id='maintable']/tbody/tr[3]/td[8]/a/img").click()
+        wd.find_element_by_xpath("//table[@id='maintable']/tbody/tr[2]/td[8]/a/img").click()
 
     def submit_updating(self):
         wd = self.app.wd
@@ -123,10 +123,13 @@ class ContactHelper:
         wd = self.app.wd
         self.return_home()
         contacts = []
-        for element in wd.find_elements_by_css_selector("tr.odd") or wd.find_elements_by_css_selector("tr. "):
-            text = element.text
+        x = 2
+        for element in wd.find_elements_by_css_selector("tr[name=entry]"):
+            lastname = element.find_element_by_xpath("//table[@id='maintable']/tbody/tr[" + str(x) + "]/td[2]").text
+            firstname = element.find_element_by_xpath("//table[@id='maintable']/tbody/tr[" + str(x) + "]/td[3]").text
             id = element.find_element_by_name("selected[]").get_attribute("value")
-            contacts.append(Contact(lastname=text, id=id))
+            contacts.append(Contact(lastname=lastname, firstname=firstname, id=id))
+            x = x+1
         return contacts
 
 

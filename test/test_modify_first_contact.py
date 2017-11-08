@@ -4,29 +4,27 @@ from model.contact import Contact
 
 
 def test_modify_first_contact(app):
-    old_contacts = app.contact.get_contact_list()
     if app.contact.count() == 0:
-        app.contact.contact_creation((Contact(firstname = "123",
-                                         middlename = "123",
-                                         lastname = "123",
-                                         nickname = "123",
-                                         title = "123",
-                                         company = "123",
-                                         address = "123",
-                                         hometele = "123",
-                                         mobiletele = "123",
-                                         worktele = "123",
-                                         faxtele = "123",
-                                         email = "123",
-                                         email2 = "123",
-                                         email3 = "123",
-                                         homepage = "123",
-                                         secondaryaddress = "123",
-                                         homesecondaryaddress = "123",
-                                         notes = "123")))
-
-    app.contact.init_edit_first_contact()
-    app.contact.fill_contact_fields(Contact(firstname = "666",
+        app.contact.contact_creation((Contact(   firstname = "123",
+                                                 middlename = "123",
+                                                 lastname = "123",
+                                                 nickname = "123",
+                                                 title = "123",
+                                                 company = "123",
+                                                 address = "123",
+                                                 hometele = "123",
+                                                 mobiletele = "123",
+                                                 worktele = "123",
+                                                 faxtele = "123",
+                                                 email = "123",
+                                                 email2 = "123",
+                                                 email3 = "123",
+                                                 homepage = "123",
+                                                 secondaryaddress = "123",
+                                                 homesecondaryaddress = "123",
+                                                 notes = "123")))
+    old_contacts = app.contact.get_contact_list()
+    contact = Contact(               firstname = "666",
                                      middlename = "666",
                                      lastname = "666",
                                      nickname = "666",
@@ -43,7 +41,13 @@ def test_modify_first_contact(app):
                                      homepage = "666",
                                      secondaryaddress = "666",
                                      homesecondaryaddress = "666",
-                                     notes = "666"))
+                                     notes = "666")
+    contact.id = old_contacts[0].id
+    app.contact.init_edit_first_contact()
+    app.contact.fill_contact_fields(contact)
     app.contact.submit_updating()
     new_contacts = app.contact.get_contact_list()
     assert len(old_contacts) == len(new_contacts)
+    old_contacts[0] = contact
+    assert sorted(old_contacts, key=Contact.id_or_max) == sorted(new_contacts, key=Contact.id_or_max)
+
