@@ -14,7 +14,8 @@ class Contact:
                         homepage = None,
                         secondaryaddress = None,
                         homesecondaryaddress = None,
-                        notes = None):
+                        notes = None,
+                        id = None):
         self.firstname = firstname
         self.middlename = middlename
         self.lastname = lastname
@@ -33,3 +34,4 @@ class Contact:
         self.address2 = secondaryaddress
         self.phone2 = homesecondaryaddress
         self.notes = notes
+        self.id = id

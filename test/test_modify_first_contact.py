@@ -4,6 +4,7 @@ from model.contact import Contact
 
 
 def test_modify_first_contact(app):
+    old_contacts = app.contact.get_contact_list()
     if app.contact.count() == 0:
         app.contact.contact_creation((Contact(firstname = "123",
                                          middlename = "123",
@@ -44,3 +45,5 @@ def test_modify_first_contact(app):
                                      homesecondaryaddress = "666",
                                      notes = "666"))
     app.contact.submit_updating()
+    new_contacts = app.contact.get_contact_list()
+    assert len(old_contacts) == len(new_contacts)
