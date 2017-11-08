@@ -3,7 +3,6 @@ from model.contact import Contact
 
 
 def test_del_first_contact(app):
-    old_contacts = app.contact.get_contact_list()
     if app.contact.count() == 0:
         app.contact.contact_creation((Contact(firstname = "123",
                                          middlename = "123",
@@ -23,6 +22,7 @@ def test_del_first_contact(app):
                                          secondaryaddress = "123",
                                          homesecondaryaddress = "123",
                                          notes = "123")))
+    old_contacts = app.contact.get_contact_list()
     app.contact.delete_first_contact()
     new_contacts = app.contact.get_contact_list()
     assert len(old_contacts) - 1 == len(new_contacts)
