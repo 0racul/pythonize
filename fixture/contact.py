@@ -103,16 +103,10 @@ class ContactHelper:
         wd = self.app.wd
         wd.find_element_by_link_text("add new").click()
 
-    def delete_first_contact(self):
-        wd = self.app.wd
-        wd.find_element_by_name("selected[]").click()
-        wd.find_element_by_xpath("//div[@id='content']/form[2]/div[2]/input").click()
-        wd.switch_to_alert().accept()
-        self.contact_cache = None
-
-    def init_edit_first_contact(self):
-        wd = self.app.wd
-        wd.find_element_by_xpath("//table[@id='maintable']/tbody/tr[2]/td[8]/a/img").click()
+    def init_edit_contact_by_index(self, index):
+            wd = self.app.wd
+            site_index = index + 2
+            wd.find_element_by_xpath("//table[@id='maintable']/tbody/tr[" + str(site_index) + "]/td[8]/a/img").click()
 
     def submit_updating(self):
         wd = self.app.wd
@@ -139,10 +133,25 @@ class ContactHelper:
 
     def update_first_contact(self, contact):
         wd = self.app.wd
-        self.init_edit_first_contact()
+        self.update_contact_by_index(0, contact)
+
+    def update_contact_by_index(self, index, contact):
+        wd = self.app.wd
+        self.init_edit_contact_by_index(index)
         self.fill_contact_fields(contact)
         self.submit_updating()
         self.contact_cache = None
+
+    def delete_first_contact(self):
+        self.delete_contact_by_index(0)
+
+    def delete_contact_by_index(self, index):
+        wd = self.app.wd
+        wd.find_elements_by_name("selected[]")[index].click()
+        wd.find_element_by_xpath("//div[@id='content']/form[2]/div[2]/input").click()
+        wd.switch_to_alert().accept()
+        self.contact_cache = None
+
 
 
 

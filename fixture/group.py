@@ -40,10 +40,10 @@ class GroupHelper:
         self.return_home()
         self.group_cache = None
 
-    def modify_first_group(self, group):
+    def modify_group_by_index(self,index, group):
         wd = self.app.wd
         self.open()
-        wd.find_element_by_name("selected[]").click()
+        self.select_group_by_index(index)
         wd.find_element_by_name("edit").click()
         self.fill_fields(group)
         wd.find_element_by_name("update").click()
@@ -92,5 +92,24 @@ class GroupHelper:
                 self.group_cache.append(Group(name=text, id=id))
         return list(self.group_cache)
 
+    def delete_group_by_index(self, index):
+        wd = self.app.wd
+        self.open()
+        self.select_group_by_index(index)
+        wd.find_element_by_name("delete").click()
+        self.return_home()
+        self.group_cache = None
 
+    def select_group_by_index(self, index):
+        wd = self.app.wd
+        wd.find_elements_by_name("selected[]")[index].click()
+
+
+    def delete_first_group(self):
+        wd = self.app.wd
+        self.delete_group_by_index(0)
+
+    def modify_first_group(self, group):
+        wd = self.app.wd
+        self.modify_group_by_index(0, group)
 
