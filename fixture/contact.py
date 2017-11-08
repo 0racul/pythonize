@@ -4,6 +4,8 @@ class ContactHelper:
     def __init__(self, app):
         self.app = app
 
+    contact_cache = None
+
 
     def contact_creation(self, contact):
         wd = self.app.wd
@@ -121,8 +123,6 @@ class ContactHelper:
         self.return_home()
         return len(wd.find_elements_by_name("selected[]"))
 
-    contact_cache = None
-
     def get_contact_list(self):
         if self.contact_cache is None:
             wd = self.app.wd
@@ -142,6 +142,7 @@ class ContactHelper:
         self.init_edit_first_contact()
         self.fill_contact_fields(contact)
         self.submit_updating()
+        self.contact_cache = None
 
 
 
