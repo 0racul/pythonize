@@ -12,6 +12,7 @@ class ContactHelper:
         self.select_group()
         self.submit()
         self.return_home()
+        self.contact_cache = None
 
     def return_home(self):
         wd = self.app.wd
@@ -105,6 +106,7 @@ class ContactHelper:
         wd.find_element_by_name("selected[]").click()
         wd.find_element_by_xpath("//div[@id='content']/form[2]/div[2]/input").click()
         wd.switch_to_alert().accept()
+        self.contact_cache = None
 
     def init_edit_first_contact(self):
         wd = self.app.wd
@@ -119,17 +121,27 @@ class ContactHelper:
         self.return_home()
         return len(wd.find_elements_by_name("selected[]"))
 
+    contact_cache = None
+
     def get_contact_list(self):
+        if self.contact_cache is None:
+            wd = self.app.wd
+            self.return_home()
+            self.contact_cache = []
+            x = 2
+            for element in wd.find_elements_by_css_selector("tr[name=entry]"):
+                lastname = element.find_element_by_xpath("//table[@id='maintable']/tbody/tr[" + str(x) + "]/td[2]").text
+                firstname = element.find_element_by_xpath("//table[@id='maintable']/tbody/tr[" + str(x) + "]/td[3]").text
+                id = element.find_element_by_name("selected[]").get_attribute("value")
+                self.contact_cache.append(Contact(lastname=lastname, firstname=firstname, id=id))
+                x = x+1
+        return list(self.contact_cache)
+
+    def update_first_contact(self, contact):
         wd = self.app.wd
-        self.return_home()
-        contacts = []
-        x = 2
-        for element in wd.find_elements_by_css_selector("tr[name=entry]"):
-            lastname = element.find_element_by_xpath("//table[@id='maintable']/tbody/tr[" + str(x) + "]/td[2]").text
-            firstname = element.find_element_by_xpath("//table[@id='maintable']/tbody/tr[" + str(x) + "]/td[3]").text
-            id = element.find_element_by_name("selected[]").get_attribute("value")
-            contacts.append(Contact(lastname=lastname, firstname=firstname, id=id))
-            x = x+1
-        return contacts
+        self.init_edit_first_contact()
+        self.fill_contact_fields(contact)
+        self.submit_updating()
+
 
 
