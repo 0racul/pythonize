@@ -1,22 +1,24 @@
 from sys import maxsize
 class Contact:
 
-    def __init__(self,firstname = None,
-                        middlename = None,
-                        lastname = None, nickname = None,
-                        title = None, company = None,
-                        address = None, hometele = None,
-                        mobiletele = None,
-                        worktele = None,
-                        faxtele = None,
-                        email = None,
-                        email2 = None,
-                        email3 = None,
-                        homepage = None,
-                        secondaryaddress = None,
-                        homesecondaryaddress = None,
-                        notes = None,
-                        id = None):
+    def __init__(self, firstname = None,
+                 middlename = None,
+                 lastname = None, nickname = None,
+                 title = None, company = None,
+                 address = None, hometele = None,
+                 mobiletele = None,
+                 worktele = None,
+                 faxtele = None,
+                 email = None,
+                 email2 = None,
+                 email3 = None,
+                 homepage = None,
+                 secondaryaddress = None,
+                 phone2 = None,
+                 notes = None,
+                 id = None,
+                 all_phones_from_homepage = None,
+                 all_emails_from_homepage = None):
         self.firstname = firstname
         self.middlename = middlename
         self.lastname = lastname
@@ -32,17 +34,24 @@ class Contact:
         self.email2 = email2
         self.email3 = email3
         self.homepage = homepage
-        self.address2 = secondaryaddress
-        self.phone2 = homesecondaryaddress
+        self.secondaryaddress = secondaryaddress
+        self.phone2 = phone2
         self.notes = notes
         self.id = id
+        self.all_phones_from_homepage = all_phones_from_homepage
+        self.all_emails_from_homepage = all_emails_from_homepage
 
 
     def __repr__(self):
-      return "%s:%s:%s" % (self.id, self.lastname, self.firstname)
+      return "%s:%s:%s:%s:%s:%s" % (self.id, self.lastname, self.firstname, self.address, self.all_phones_from_homepage, self.all_emails_from_homepage)
 
     def __eq__(self, other):
-      return self.lastname == other.lastname and (self.id is None or other.id is None or self.id == other.id) and self.firstname == other.firstname
+      return (self.lastname == other.lastname
+              and (self.id is None or other.id is None or self.id == other.id)
+              and self.firstname == other.firstname
+              and self.address == other.address
+              and self.all_phones_from_homepage == other.all_phones_from_homepage
+              and self.all_emails_from_homepage == other.all_emails_from_homepage)
 
     def id_or_max(self):
         if self.id:
