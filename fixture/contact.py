@@ -131,17 +131,18 @@ class ContactHelper:
             self.contact_cache = []
             for row in wd.find_elements_by_name("entry"):
                 cells = row.find_elements_by_tag_name("td")
+                id = cells[0].find_element_by_tag_name("input").get_attribute("value")
                 lastname = cells[1].text
                 firstname = cells[2].text
-                id = cells[0].find_element_by_tag_name("input").get_attribute("value")
-                all_phones = cells[5].text.splitlines()
-                self.contact_cache.append(Contact(lastname=lastname,
+                address = cells[3].text
+                all_emails = cells[4].text
+                all_phones = cells[5].text
+                self.contact_cache.append(Contact(id=id,
                                                   firstname=firstname,
-                                                  id=id,
-                                                  hometele=all_phones[0],
-                                                  mobiletele=all_phones[1],
-                                                  worktele=all_phones[2],
-                                                  phone2=all_phones[3]))
+                                                  lastname=lastname,
+                                                  address=address,
+                                                  all_phones_from_homepage=all_phones,
+                                                  all_emails_from_homepage=all_emails))
         return list(self.contact_cache)
 
     def update_first_contact(self, contact):
