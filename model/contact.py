@@ -29,7 +29,7 @@ class Contact:
         self.hometele = hometele
         self.mobiletele = mobiletele
         self.worktele = worktele
-        self.fax = faxtele
+        self.faxtele = faxtele
         self.email = email
         self.email2 = email2
         self.email3 = email3
@@ -46,10 +46,25 @@ class Contact:
       return "%s:%s:%s:%s:%s:%s" % (self.id, self.lastname, self.firstname, self.address, self.all_phones_from_homepage, self.all_emails_from_homepage)
 
     def __eq__(self, other):
-      return (self.lastname == other.lastname
-              and (self.id is None or other.id is None or self.id == other.id)
+      return ((self.id is None or other.id is None or self.id == other.id)
+              and self.lastname == other.lastname
               and self.firstname == other.firstname
+              and self.middlename == other.middlename
+              and self.nickname == other.nickname
+              and self.title == other.title
+              and self.company == other.company
+              and self.hometele == other.hometele
+              and self.worktele == other.worktele
+              and self.faxtele == other.faxtele
+              and self.email == other.email
+              and self.email2 == other.email2
+              and self.email3 == other.email3
+              and self.homepage == other.homepage
+              and self.secondaryaddress == other.secondaryaddress
+              and self.phone2 == other.phone2
+              and self.notes == other.notes
               and self.address == other.address
+              and self.mobiletele == other.mobiletele
               and self.all_phones_from_homepage == other.all_phones_from_homepage
               and self.all_emails_from_homepage == other.all_emails_from_homepage)
 
@@ -58,3 +73,4 @@ class Contact:
             return int(self.id)
         else:
             return maxsize
+

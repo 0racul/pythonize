@@ -33,13 +33,13 @@ class ContactHelper:
         self.change_fields_value("home", contact.hometele)
         self.change_fields_value("mobile", contact.mobiletele)
         self.change_fields_value("work", contact.worktele)
-        self.change_fields_value("fax", contact.fax)
+        self.change_fields_value("fax", contact.faxtele)
         self.change_fields_value("email", contact.email)
         self.change_fields_value("email2", contact.email2)
         self.change_fields_value("email3", contact.email3)
         self.change_fields_value("homepage", contact.homepage)
         self.input_dates()
-        self.change_fields_value("address2", contact.address2)
+        self.change_fields_value("address2", contact.secondaryaddress)
         self.change_fields_value("phone2", contact.phone2)
         self.change_fields_value("notes", contact.notes)
 
@@ -105,14 +105,14 @@ class ContactHelper:
         wd.find_element_by_link_text("add new").click()
 
     def init_edit_contact_by_index(self, index):
-            wd = self.app.wd
-            site_index = index + 2
-            wd.find_element_by_xpath("//table[@id='maintable']/tbody/tr[" + str(site_index) + "]/td[8]/a/img").click()
+        wd = self.app.wd
+        site_index = index + 2
+        wd.find_element_by_xpath("//table[@id='maintable']/tbody/tr[" + str(site_index) + "]/td[8]/a/img").click()
 
     def init_view_contact_by_index(self, index):
-            wd = self.app.wd
-            site_index = index + 2
-            wd.find_element_by_xpath("//table[@id='maintable']/tbody/tr[" + str(site_index) + "]/td[7]/a/img").click()
+        wd = self.app.wd
+        site_index = index + 2
+        wd.find_element_by_xpath("//table[@id='maintable']/tbody/tr[" + str(site_index) + "]/td[7]/a/img").click()
 
 
     def submit_updating(self):
@@ -169,28 +169,46 @@ class ContactHelper:
     def get_contact_info_from_edit_page(self, index):
         wd = self.app.wd
         self.init_edit_contact_by_index(index)
-        id = wd.find_element_by_name("id").get_attribute("value")
-        lastname = wd.find_element_by_name("lastname").get_attribute("value")
         firstname = wd.find_element_by_name("firstname").get_attribute("value")
+        middlename = wd.find_element_by_name("middlename").get_attribute("value")
+        lastname = wd.find_element_by_name("lastname").get_attribute("value")
+        nickname = wd.find_element_by_name("nickname").get_attribute("value")
+        title = wd.find_element_by_name("title").get_attribute("value")
+        company = wd.find_element_by_name("company").get_attribute("value")
         address = wd.find_element_by_name("address").get_attribute("value")
         hometele = wd.find_element_by_name("home").get_attribute("value")
         worktele = wd.find_element_by_name("work").get_attribute("value")
-        mobiletele = wd.find_element_by_name("mobile").get_attribute("value")
-        phone2 = wd.find_element_by_name("phone2").get_attribute("value")
+        faxtele = wd.find_element_by_name("fax").get_attribute("value")
         email = wd.find_element_by_name("email").get_attribute("value")
         email2 = wd.find_element_by_name("email2").get_attribute("value")
         email3 = wd.find_element_by_name("email3").get_attribute("value")
-        return Contact(id=id,
-                       lastname=lastname,
-                       firstname=firstname,
-                       address=address,
-                       hometele=hometele,
-                       worktele=worktele,
-                       mobiletele=mobiletele,
-                       phone2=phone2,
-                       email=email,
-                       email2=email2,
-                       email3=email3)
+        homepage = wd.find_element_by_name("homepage").get_attribute("value")
+        secondaryaddress = wd.find_element_by_name("secondaryaddress").get_attribute("value")
+        phone2 = wd.find_element_by_name("phone2").get_attribute("value")
+        notes = wd.find_element_by_name("notes").get_attribute("value")
+        id = wd.find_element_by_name("id").get_attribute("value")
+        mobiletele = wd.find_element_by_name("mobile").get_attribute("value")
+        return Contact(firstname = firstname,
+                       middlename = middlename,
+                       lastname = lastname,
+                       nickname = nickname,
+                       title = title,
+                       company = company,
+                       address = address,
+                       hometele = hometele,
+                       mobiletele = mobiletele,
+                       worktele = worktele,
+                       faxtele = faxtele,
+                       email = email,
+                       email2 = email2,
+                       email3 = email3,
+                       homepage = homepage,
+                       secondaryaddress = secondaryaddress,
+                       phone2 = phone2,
+                       notes = notes,
+                       id = id,
+                       all_phones_from_homepage = None,
+                       all_emails_from_homepage = None)
 
 
 
@@ -245,4 +263,51 @@ class ContactHelper:
                                                   all_emails_from_homepage=all_emails))
         return list(self.contact_cache)
 
-
+    def get_contact_list_full_info(self):
+        if self.contact_cache is None:
+            wd = self.app.wd
+            self.return_home()
+            self.contact_cache = []
+            for row in wd.find_elements_by_name("entry"):
+                cells = row.find_elements_by_tag_name("td")
+                cells[7].find_element_by_tag_name("a").click()
+                firstname = wd.find_element_by_name("firstname").get_attribute("value")
+                middlename = wd.find_element_by_name("middlename").get_attribute("value")
+                lastname = wd.find_element_by_name("lastname").get_attribute("value")
+                nickname = wd.find_element_by_name("nickname").get_attribute("value")
+                title = wd.find_element_by_name("title").get_attribute("value")
+                company = wd.find_element_by_name("company").get_attribute("value")
+                address = wd.find_element_by_name("address").get_attribute("value")
+                hometele = wd.find_element_by_name("home").get_attribute("value")
+                worktele = wd.find_element_by_name("work").get_attribute("value")
+                faxtele = wd.find_element_by_name("fax").get_attribute("value")
+                email = wd.find_element_by_name("email").get_attribute("value")
+                email2 = wd.find_element_by_name("email2").get_attribute("value")
+                email3 = wd.find_element_by_name("email3").get_attribute("value")
+                homepage = wd.find_element_by_name("homepage").get_attribute("value")
+                secondaryaddress = wd.find_element_by_name("address2").get_attribute("value")
+                phone2 = wd.find_element_by_name("phone2").get_attribute("value")
+                notes = wd.find_element_by_name("notes").get_attribute("value")
+                id = wd.find_element_by_name("id").get_attribute("value")
+                mobiletele = wd.find_element_by_name("mobile").get_attribute("value")
+                self.contact_cache.append(Contact(id=id,
+                                                  firstname=firstname,
+                                                  middlename=middlename,
+                                                  nickname=nickname,
+                                                  title=title,
+                                                  company=company,
+                                                  hometele=hometele,
+                                                  worktele=worktele,
+                                                  faxtele=faxtele,
+                                                  email=email,
+                                                  email2=email2,
+                                                  email3=email3,
+                                                  homepage=homepage,
+                                                  secondaryaddress=secondaryaddress,
+                                                  phone2=phone2,
+                                                  notes=notes,
+                                                  mobiletele=mobiletele,
+                                                  lastname=lastname,
+                                                  address=address))
+                self.return_home()
+        return list(self.contact_cache)
