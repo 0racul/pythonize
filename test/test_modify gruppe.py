@@ -6,9 +6,9 @@ from random import randrange
 
 
 
-def test_modify_gruppe(app):
+def test_modify_gruppe(app, db):
     app.group.open()
-    old_groups = app.group.get_group_list()
+    old_groups = db.get_group_list()
     index = randrange(len(old_groups))
 
     if app.group.count() == 0:
@@ -17,10 +17,10 @@ def test_modify_gruppe(app):
     group = Group("[eqgbplfl;buehlf", "[eqgbplfl;buehlf", "[eqgbplfl;buehlf")
     group.id = old_groups[index].id
 
-    app.group.modify_group_by_index(index, group)
+    app.group.modify_group_by_id(group.id, group)
 
     assert len(old_groups) == app.group.count()
-    new_groups = app.group.get_group_list()
+    new_groups = db.get_group_list()
 
 
     old_groups[index] = group

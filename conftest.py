@@ -5,7 +5,7 @@ import os.path
 import importlib
 import jsonpickle
 import pymysql.cursors
-from fixture.DB import DBFixture
+from fixture.db import DBFixture
 
 fixture = None
 target = None
@@ -43,6 +43,10 @@ def db(request):
 
 
 
+@pytest.fixture
+def check_ui(request):
+    return request.config.getoption("--check_ui")
+
 
 
 
@@ -58,6 +62,8 @@ def stop(request):
 def pytest_addoption(parser):
     parser.addoption("--browser", action="store", default="firefox")
     parser.addoption("--target", action="store", default="target.json")
+    parser.addoption("--check_ui", action="store_true")
+
 
 
 
