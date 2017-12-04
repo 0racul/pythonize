@@ -323,3 +323,9 @@ class ContactHelper:
     def select_contact_by_id(self, id):
         wd = self.app.wd
         wd.find_element_by_css_selector("input[value ='%s']" % id).click()
+
+
+    def get_last_contact_id(self):
+        wd = self.app.wd
+        id_s = wd.find_element_by_css_selector("input[value = 'selected[]']").get_attribute("id")
+        return max(id_s)
