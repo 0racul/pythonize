@@ -327,5 +327,8 @@ class ContactHelper:
 
     def get_last_contact_id(self):
         wd = self.app.wd
-        id_s = wd.find_element_by_css_selector("input[value = 'selected[]']").get_attribute("id")
-        return max(id_s)
+        id_s = []
+        for val in wd.find_elements_by_css_selector("input[value = 'selected[]']"):
+            id_s.append(int(val.get_attribute("id")))
+        id = max(id_s)
+        return id
